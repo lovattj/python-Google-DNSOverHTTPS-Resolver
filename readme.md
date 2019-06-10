@@ -1,6 +1,7 @@
 ## DNS over HTTPS resolver for Python using Google DNS
 
 **Requirements**  
+Python 3.4+  
 Requests library (https://2.python-requests.org/en/master/)
 
 **How to use**  
