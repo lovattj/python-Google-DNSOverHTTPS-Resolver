@@ -4,7 +4,15 @@
 Requests library (https://2.python-requests.org/en/master/)
 
 **How to use**  
-sdfsf
+If you just want a quick A record:  
+```
+import dnsOverHttps
+try:
+  aRecord = dnsOverHttps.GoogleDNSQuery.getARecordFor("google.com")
+  print(a)
+except Exception as e:
+  print("EXCEPTION - {} - {}".format(type(e),e)
+```
 
 **Example**  
 See and run `example.py`
