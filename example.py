@@ -5,9 +5,9 @@ query = "google.com"
 gd = dnsOverHttps.GoogleDNSQuery(query,"a")
 
 try:
-    dnsresponse = gd.query()
-    for i in dnsresponse:
-        print(i)
+    dnsresponse = gd.query() # List of DNSResponse objects
+    for i in dnsresponse: # iterate through them
+        print("Record type is {} and record data is {}".format(i.recordType, i.recordData)) # 
 except Exception as e:
     print("EXCEPTION: {} - {}".format(type(e), e))
 
