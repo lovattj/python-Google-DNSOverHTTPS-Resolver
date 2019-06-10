@@ -1,9 +1,10 @@
 ## DNS over HTTPS resolver for Python using Google DNS
 
-**Requirements**
+**Requirements**  
 Requests library
 
-**How to use**
+**How to use**  
+sdfsf
 
-**Example**
+**Example**  
 See and run `example.py`
