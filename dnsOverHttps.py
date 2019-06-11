@@ -38,7 +38,7 @@ class GoogleDNSQuery():
 
         import requests
         builtQuery = "{}name={}&type={}".format(self.REQUEST_BASE_URI, self.domain, self.recordType)
-        response = requests.get(builtQuery)
+        response = requests.get(builtQuery, timeout=5)
 
         if (response.status_code!=200):
             raise BadStatusCodeResponseException()

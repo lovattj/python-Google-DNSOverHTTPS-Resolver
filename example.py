@@ -14,7 +14,6 @@ except Exception as e:
 
 print("\n*** Demonstration of convenience method to just get an IPv4 A address for a domain ***")
 
-import dnsOverHttps
 try:
   aRecord = dnsOverHttps.GoogleDNSQuery.getARecordFor("google.com")
   print(aRecord) # IP Address here!
@@ -23,7 +22,6 @@ except Exception as e:
 
 print("\n*** Demonstration of convenience method to just get an IPv6 AAAA address for a domain ***")
 
-import dnsOverHttps
 try:
   aaaaRecord = dnsOverHttps.GoogleDNSQuery.getAAAARecordFor("google.com")
   print(aaaaRecord) # IP Address here!
