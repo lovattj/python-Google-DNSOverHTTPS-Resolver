@@ -25,7 +25,7 @@ except Exception as e:
   print("EXCEPTION - {} - {}".format(type(e),e))
 ```
 
-If you want more control, create an instance of `GoogleDNSQuery` with the domain name and record type (`a` or `aaaa`) in the constructor, and call `query()` method. This will return a list of `DNSRecord` objects you can iterate through in case there's more than 1 of that record type.
+If you want more control, or if you want MX or TXT records, create an instance of `GoogleDNSQuery` with the domain name and record type (`a` or `aaaa`, `mx` or `txt`) in the constructor, and call `query()` method. This will return a list of `DNSRecord` objects you can iterate through in case there's more than 1 of that record type.
 
 ```
 query = "google.com"
@@ -39,9 +39,10 @@ except Exception as e:
     print("EXCEPTION: {} - {}".format(type(e), e))
 ```
 
-
 **Example**  
-See and run `example.py`
+See and run `example.py`, `example-MX.py` and `example-TXT.py`
 
 **Limitations**  
-Only A and AAAA records supported at the moment - more to come!
+Only `a`, `aaaa`, `mx` and `txt` records supported at the moment - more to come!
+
+For `mx` records, ordering by priority is not guaranteed - if you need a specific order then sort the returned list yourself - in `example-MX.py` there is an example of how to do this.
