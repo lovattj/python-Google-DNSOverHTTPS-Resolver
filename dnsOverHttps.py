@@ -33,7 +33,7 @@ class GoogleDNSQuery():
         self.recordType = recordType
 
     def query(self):
-        if (not(self.recordType == "a" or self.recordType == "aaaa")):
+        if (not(self.recordType == "a" or self.recordType == "aaaa" or self.recordType == "mx" or self.recordType == "txt")):
             raise InvalidRecordTypeException("Record type requested was {} and this is not supported.".format(self.recordType))
 
         import requests
