@@ -45,7 +45,7 @@ class GoogleDNSQuery():
         parsedJsonResponse = response.json()
         if (parsedJsonResponse["Status"]!= 0):
             raise BadDNSResponseException
-        if not "Answer" in parsedJsonResponse.keys():
+        if not "Answer" in parsedJsonResponse:
             raise NoDNSResultsException
 
         output = []
